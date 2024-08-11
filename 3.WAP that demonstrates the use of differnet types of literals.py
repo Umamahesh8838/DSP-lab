@@ -42,5 +42,4 @@ def literals_demo():
     print("True:", true_literal)
     print("False:", false_literal)
 
-# Call the function to demonstrate literals
 literals_demo()
