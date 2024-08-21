@@ -30,12 +30,22 @@ ems = EMS()
 while True:
     c = input("\n1.Add 2.Remove 3.Display 4.Exit: ")
     if c == '1':
-        ems.add(int(input("ID: ")), input("Name: "), input("Pos: "), float(input("Sal: ")))
+        emp_id = int(input("Enter Employee ID: "))
+        name = input("Enter Name: ")
+        position = input("Enter Position: ")
+        salary = float(input("Enter Salary: "))
+        ems.add_employee(emp_id, name, position, salary)
+
     elif c == '2':
-        ems.remove(int(input("ID to remove: ")))
+        emp_id = int(input("Enter Employee ID to remove: "))
+        ems.remove_employee(emp_id)
+
     elif c == '3':
-        ems.display_all()
+        ems.display_all_employees()
+
     elif c == '4':
+        print("Exiting Employee Management System. Goodbye!")
         break
+
     else:
-        print("Invalid choice")
+        print("Invalid choice. Please enter a valid option.")
